@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_app/res/colors.dart';
-import 'component/bottom.dart';
-import 'component/maintext.dart';
-import 'component/signwidget.dart';
+import 'component/bottom_widget.dart';
+import 'component/maintext_widget.dart';
+import 'component/sign_widget.dart';
 import 'component/sizeedbox.dart';
-import 'component/text_checkbox.dart';
-import 'component/textfiled.dart';
+import 'component/text_checkbox_widget.dart';
+import 'component/textfiled_widget.dart';
 
 class Signin extends StatelessWidget {
   const Signin({super.key});
@@ -56,7 +56,9 @@ class Signin extends StatelessWidget {
           ),
           sizedBoxwidth(90),
           InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed("forgetPassword");
+              },
               child: RichText(
                 text: const TextSpan(
                   text: 'Forgot password?',
@@ -87,12 +89,14 @@ class Signin extends StatelessWidget {
       ),
       sizedBoxhight(20),
       Row(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            "Don’t have an account? ",
-            style: TextStyle(
-                fontSize: 11, fontWeight: FontWeight.w400, color: GREY_3),
+          const Padding(
+            padding: EdgeInsets.only(left: 110),
+            child: Text(
+              "Don’t have an account? ",
+              style: TextStyle(
+                  fontSize: 11, fontWeight: FontWeight.w400, color: GREY_3),
+            ),
           ),
           InkWell(
             onTap: () {
@@ -107,9 +111,12 @@ class Signin extends StatelessWidget {
       ),
       sizedBoxhight(55),
       Row(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          elvatBtn(const Icon(Icons.facebook), "Connect with Facebook", 13),
+          Padding(
+            padding: const EdgeInsets.only(left: 40),
+            child: elvatBtnFacbook(
+                const Icon(Icons.facebook), "Connect with Facebook", 13),
+          ),
         ],
       )
     ]));

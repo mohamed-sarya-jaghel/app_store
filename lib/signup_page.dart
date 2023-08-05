@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_app/component/textfiled.dart';
+import 'package:shopping_app/component/textfiled_widget.dart';
 import 'package:shopping_app/res/colors.dart';
-import 'component/bottom.dart';
-import 'component/maintext.dart';
-import 'component/signwidget.dart';
+import 'component/bottom_widget.dart';
+import 'component/maintext_widget.dart';
+import 'component/sign_widget.dart';
 import 'component/sizeedbox.dart';
-import 'component/text_checkbox.dart';
+import 'component/text_checkbox_widget.dart';
 
 class Signup extends StatelessWidget {
   const Signup({super.key});
@@ -69,15 +69,14 @@ class Signup extends StatelessWidget {
               width: 305,
               height: 44,
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5)),
-                    backgroundColor: PRIMARAY_COLOR),
-                onPressed: () {
-                  Navigator.of(context).pushNamed("Signup");
-                },
-                child: singinWidget("Sign Up")
-              ),
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5)),
+                      backgroundColor: PRIMARAY_COLOR),
+                  onPressed: () {
+                    Navigator.of(context).pushNamed("Signup");
+                  },
+                  child: singinWidget("Sign Up")),
             ),
           ),
           sizedBoxhight(20),
@@ -102,9 +101,13 @@ class Signup extends StatelessWidget {
           ),
           sizedBoxhight(55),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+           
             children: [
-              elvatBtn(Icon(Icons.facebook), "Connect with Facebook", 13),
+              Padding(
+                padding: const EdgeInsets.only(left: 40),
+                child: elvatBtnFacbook(
+                    const Icon(Icons.facebook), "Connect with Facebook", 13),
+              ),
             ],
           )
         ],

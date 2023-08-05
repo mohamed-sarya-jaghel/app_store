@@ -21,9 +21,10 @@ Widget textFiled(
       ),
       sizedBoxhight(10),
       Padding(
-        padding: const EdgeInsets.only(left: 40),
-        child: TextField(
+        padding: const EdgeInsets.only(left: 40,right: 60),
+        child: TextFormField(
           decoration: InputDecoration(
+                       
               prefixIcon: prefixIcon,
               labelStyle: TextStyle(color: GREY_3, fontSize: 11),
               hintText: hintText,
