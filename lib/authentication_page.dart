@@ -8,12 +8,17 @@ import 'component/number_widget2.dart';
 import 'component/sign_widget.dart';
 import 'component/sizeedbox.dart';
 
-class Authentication extends StatelessWidget {
+class Authentication extends StatefulWidget {
   const Authentication({super.key});
 
   @override
+  State<Authentication> createState() => _AuthenticationState();
+}
+
+class _AuthenticationState extends State<Authentication> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
+     return Scaffold(
         body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Padding(
         padding: const EdgeInsets.only(top: 25),

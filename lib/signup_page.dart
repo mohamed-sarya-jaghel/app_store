@@ -7,8 +7,15 @@ import 'component/sign_widget.dart';
 import 'component/sizeedbox.dart';
 import 'component/text_checkbox_widget.dart';
 
-class Signup extends StatelessWidget {
+class Signup extends StatefulWidget {
   const Signup({super.key});
+
+  @override
+  State<Signup> createState() => _SignupState();
+}
+
+class _SignupState extends State<Signup> {
+  bool ischeck1 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +39,13 @@ class Signup extends StatelessWidget {
           ),
           sizedBoxhight(60),
           textFiled(
-              "Enter your email",
-              "ranem.omarr@example.com",
-              const Icon(
-                Icons.email_outlined,
-                color: GREY_3,
-              )),
+            "Enter your email",
+            "ranem.omarr@example.com",
+            const Icon(
+              Icons.email_outlined,
+              color: GREY_3,
+            ),
+          ),
           sizedBoxhight(40),
           textFiled(
               "Username",
@@ -56,9 +64,14 @@ class Signup extends StatelessWidget {
               )),
           sizedBoxhight(25),
           textcheckbox(
-            const Icon(
-              Icons.check_box_outlined,
-              color: GREY_3,
+            Checkbox(
+              value: ischeck1,
+              activeColor: GREY_3,
+              onChanged: (val) {
+                setState(() {
+                  ischeck1 = val!;
+                });
+              },
             ),
             "By creating an account, you agree to our\n Term & Conditions",
           ),
@@ -74,7 +87,7 @@ class Signup extends StatelessWidget {
                           borderRadius: BorderRadius.circular(5)),
                       backgroundColor: PRIMARAY_COLOR),
                   onPressed: () {
-                    Navigator.of(context).pushNamed("Signup");
+                    Navigator.of(context).pushNamed("deliveraddress");
                   },
                   child: singinWidget("Sign Up")),
             ),
@@ -101,7 +114,6 @@ class Signup extends StatelessWidget {
           ),
           sizedBoxhight(55),
           Row(
-           
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 40),

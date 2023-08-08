@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_app/dilevery_address.dart';
 import 'package:shopping_app/gettarted_page.dart';
 import 'package:shopping_app/forget_password_page.dart';
 import 'package:shopping_app/signup_page.dart';
 import 'package:shopping_app/singin_page.dart';
 
-import 'Phone Verified_page.dart';
+import 'phone_verified_page.dart';
 import 'authentication_page.dart';
 
 void main() {
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         "forgetPassword": (context) => ForgetPasswrod(),
         "authentication": (context) => Authentication(),
         "phoneverified": (context) => PhoneVerified(),
+        "deliveraddress": (context) => deliveryAdress(),
       },
     );
   }

@@ -7,8 +7,15 @@ import 'component/sizeedbox.dart';
 import 'component/text_checkbox_widget.dart';
 import 'component/textfiled_widget.dart';
 
-class Signin extends StatelessWidget {
+class Signin extends StatefulWidget {
   const Signin({super.key});
+
+  @override
+  State<Signin> createState() => _SigninState();
+}
+
+class _SigninState extends State<Signin> {
+  bool ischeck = false;
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +55,14 @@ class Signin extends StatelessWidget {
       Row(
         children: [
           textcheckbox(
-            const Icon(
-              Icons.check_box_outlined,
-              color: GREY_3,
+            Checkbox(
+              value: ischeck,
+              activeColor: GREY_3,
+              onChanged: (val) {
+                setState(() {
+                  ischeck = val!;
+                });
+              },
             ),
             "Remember me",
           ),
@@ -118,7 +130,7 @@ class Signin extends StatelessWidget {
                 const Icon(Icons.facebook), "Connect with Facebook", 13),
           ),
         ],
-      )
+      ),
     ]));
   }
 }
