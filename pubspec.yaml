@@ -28,11 +28,14 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  bloc: ^8.1.2
+  
+  
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  onscreen_num_keyboard: ^1.0.4
+  
+  
+  
 
 dev_dependencies:
 

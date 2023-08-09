@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping_app/component/maintext_widget.dart';
 import 'package:shopping_app/component/sizeedbox.dart';
@@ -42,7 +41,7 @@ class PhoneVerified extends StatelessWidget {
                       borderRadius: BorderRadius.circular(5)),
                   backgroundColor: PRIMARAY_COLOR),
               onPressed: () {
-                Navigator.of(context).pushNamed("phoneverified");
+                Navigator.of(context).pushNamed("homepage");
               },
               child: singinWidget("Done")),
         ),

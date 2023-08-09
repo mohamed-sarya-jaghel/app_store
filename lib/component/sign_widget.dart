@@ -8,11 +8,11 @@ Widget singinWidget(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: [
       Padding(
-        padding: EdgeInsets.only(left: 95),
+        padding: const EdgeInsets.only(left: 95),
         child: Text(
           text,
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
+          style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
         ),
       ),
       sizedBoxwidth(50),

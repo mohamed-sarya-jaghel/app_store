@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping_app/component/sign_widget.dart';
 import 'package:shopping_app/res/colors.dart';
@@ -9,6 +8,7 @@ import 'component/maintext_widget.dart';
 import 'component/sizeedbox.dart';
 import 'component/textfiled_widget.dart';
 
+// ignore: camel_case_types
 class deliveryAdress extends StatefulWidget {
   const deliveryAdress({super.key});
 
@@ -16,6 +16,7 @@ class deliveryAdress extends StatefulWidget {
   State<deliveryAdress> createState() => _deliveryAdressState();
 }
 
+// ignore: camel_case_types
 class _deliveryAdressState extends State<deliveryAdress> {
   double containerWidth = 120;
   double containerhigth = 49;

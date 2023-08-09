@@ -2,15 +2,9 @@
 
 import 'package:flutter/material.dart';
 
-import '../res/colors.dart';
+import '../../res/colors.dart';
 
-//استدعاء الايكsون لوحدى بس ماعرفت كيف
-Widget numberWidget(
-  String number,
-  String letter,
-  double width,
-   double height
-) {
+Widget numberWidget(String number, String letter, double width, double height) {
   return InkWell(
     onTap: () {},
     child: Container(

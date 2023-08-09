@@ -4,26 +4,26 @@ import 'package:flutter/material.dart';
 import 'package:shopping_app/component/maintext_widget.dart';
 import 'package:shopping_app/res/colors.dart';
 
-import 'component/number_widget2.dart';
-import 'component/numbers_widget.dart';
+import 'component/Number_Widget/number_widget2.dart';
+import 'component/Number_Widget/numbers_widget.dart';
 import 'component/sign_widget.dart';
 import 'component/sizeedbox.dart';
 
 // ignore: must_be_immutable
 class ForgetPasswrod extends StatefulWidget {
-  ForgetPasswrod({super.key});
+  const ForgetPasswrod({super.key});
 
   @override
   State<ForgetPasswrod> createState() => _ForgetPasswrodState();
 }
 
 TextEditingController controller = TextEditingController();
+List list = ["1", "2", "3"];
 
 class _ForgetPasswrodState extends State<ForgetPasswrod> {
   @override
   Widget build(BuildContext context) {
-     
- return Scaffold(
+    return Scaffold(
         body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Padding(
         padding: const EdgeInsets.only(top: 25),
@@ -91,9 +91,7 @@ class _ForgetPasswrodState extends State<ForgetPasswrod> {
         ),
       ),
       sizedBoxhight(90),
-  
-        numberwidget2()
-   
+      numberwidget2()
     ]));
   }
 }

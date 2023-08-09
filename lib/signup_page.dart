@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_app/component/textfiled_widget.dart';
 import 'package:shopping_app/res/colors.dart';
-import 'component/bottom_widget.dart';
+import 'component/Elvat_Btn3w/bottom_widget.dart';
 import 'component/maintext_widget.dart';
 import 'component/sign_widget.dart';
 import 'component/sizeedbox.dart';
@@ -87,7 +87,7 @@ class _SignupState extends State<Signup> {
                           borderRadius: BorderRadius.circular(5)),
                       backgroundColor: PRIMARAY_COLOR),
                   onPressed: () {
-                    Navigator.of(context).pushNamed("deliveraddress");
+                    Navigator.of(context).pushNamed("homepage");
                   },
                   child: singinWidget("Sign Up")),
             ),

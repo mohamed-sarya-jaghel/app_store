@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 
-import '../res/colors.dart';
 
 Widget sizedBoxhight(
   double height,

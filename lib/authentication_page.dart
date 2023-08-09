@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shopping_app/component/numbers_widget.dart';
+import 'package:shopping_app/component/Number_Widget/numbers_widget.dart';
 import 'package:shopping_app/res/colors.dart';
 
 import 'component/maintext_widget.dart';
-import 'component/number_widget2.dart';
+import 'component/Number_Widget/number_widget2.dart';
 import 'component/sign_widget.dart';
 import 'component/sizeedbox.dart';
 

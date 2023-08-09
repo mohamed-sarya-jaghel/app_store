@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_app/res/colors.dart';
-import 'component/bottom_widget.dart';
+import 'component/Elvat_Btn3w/bottom_widget.dart';
 import 'component/maintext_widget.dart';
 import 'component/sign_widget.dart';
 import 'component/sizeedbox.dart';

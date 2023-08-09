@@ -22,7 +22,7 @@ class GetStarted extends StatelessWidget {
                 decoration: BoxDecoration(
                   boxShadow: const [BoxShadow(blurRadius: 25)],
                   borderRadius: BorderRadius.circular(50),
-                  color: LOGO,
+                  color: ORANGE,
                 ),
                 child: Center(
                   child: Text(
