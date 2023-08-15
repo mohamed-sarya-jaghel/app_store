@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, file_names
 
 import 'package:flutter/material.dart';
 import 'package:shopping_app/component/sign_widget.dart';
@@ -91,19 +91,7 @@ class _deliveryAdressState extends State<deliveryAdress> {
                   ),
                 ),
               ),
-              Container(
-                width: 59,
-                height: 18,
-                margin: EdgeInsets.only(left: 410, top: 10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(2),
-                  color: GREY_3,
-                ),
-                child: InkWell(
-                  onTap: () {},
-                  child: Text("Add note"),
-                ),
-              ),
+             
             ],
           ),
           crossFadeState:
@@ -122,7 +110,7 @@ class _deliveryAdressState extends State<deliveryAdress> {
                       borderRadius: BorderRadius.circular(5)),
                   backgroundColor: PRIMARAY_COLOR),
               onPressed: () {
-                Navigator.of(context).pushNamed("Signup");
+                Navigator.of(context).pushNamed("homepage");
               },
               child: singinWidget("Save")),
         ),

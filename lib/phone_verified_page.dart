@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:shopping_app/component/maintext_widget.dart';
 import 'package:shopping_app/component/sizeedbox.dart';

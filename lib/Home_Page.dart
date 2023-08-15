@@ -1,7 +1,11 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, file_names
+
 import 'package:flutter/material.dart';
 import 'package:shopping_app/component/sizeedbox.dart';
 import 'package:shopping_app/res/colors.dart';
 import 'component/Elvat_Btn3w/bottom_widget.dart';
+import 'component/Photos_Homepage_Widget.dart';
+import 'component/Setting_Options/order_history_continer.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -10,6 +14,9 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  int selectindex = 0;
+  //List pages = [ProductFavorite(),];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +37,10 @@ class _HomepageState extends State<Homepage> {
               children: [
                 Image.asset("images/big_circle.jpg"),
                 Image.asset("images/small_circle.jpg"),
-                Image.asset("images/profile_pic.jpg")
+                Image.asset(
+                  "images/Ellipse (1).jpg",
+                  scale: 2,
+                )
               ],
             )
           ],
@@ -138,7 +148,7 @@ class _HomepageState extends State<Homepage> {
                                   child: Row(
                                     children: [
                                       SizedBox(
-                                        width: 269,
+                                        width: 250,
                                         height: 42,
                                         child: ElevatedButton(
                                           style: ElevatedButton.styleFrom(
@@ -199,6 +209,171 @@ class _HomepageState extends State<Homepage> {
           ),
         )
       ]),
+      sizedBoxhight(20),
+      Image.asset("images/homepage_profile.jpg"),
+      sizedBoxhight(30),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          orderhistory_Botton(SECONDARAY_COLOR, WHITE, 52, 26, "All"),
+          orderhistory_Botton(WHITE, SECONDARAY_COLOR, 51, 26, "Bags"),
+          orderhistory_Botton(WHITE, SECONDARAY_COLOR, 58, 26, "Rings"),
+          orderhistory_Botton(WHITE, SECONDARAY_COLOR, 76, 26, "necklace"),
+          orderhistory_Botton(WHITE, SECONDARAY_COLOR, 65, 26, "earring"),
+        ],
+      ),
+      sizedBoxhight(25),
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed("proudctpage");
+                  },
+                  child: PicHomePage(
+                    Image.asset(
+                      "images/home_pic1.jpg",
+                      width: 121,
+                      height: 92,
+                    ),
+                    "Rings",
+                    "Cream elegant",
+                    "10.90",
+                  ),
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: PicHomePage(
+                    Image.asset(
+                      "images/home_pic2.jpg",
+                      width: 121,
+                      height: 92,
+                    ),
+                    "Bags",
+                    "Antelope ",
+                    "200.00",
+                  ),
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: PicHomePage(
+                    Image.asset(
+                      "images/home_pic3.jpg",
+                      width: 121,
+                      height: 92,
+                    ),
+                    "Rings",
+                    "Antelope ",
+                    "10.00",
+                  ),
+                )
+              ],
+            ),
+            sizedBoxhight(10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                InkWell(
+                  onTap: () {},
+                  child: PicHomePage(
+                    Image.asset(
+                      "images/home_pic4.jpg",
+                      width: 121,
+                      height: 92,
+                    ),
+                    "Rings",
+                    "Cream elegant",
+                    "10.90",
+                  ),
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: PicHomePage(
+                    Image.asset(
+                      "images/home_pic3.jpg",
+                      width: 121,
+                      height: 92,
+                    ),
+                    "Bags",
+                    "Antelope ",
+                    "200.00",
+                  ),
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: PicHomePage(
+                    Image.asset(
+                      "images/home_pic4.jpg",
+                      width: 121,
+                      height: 92,
+                    ),
+                    "Rings",
+                    "Antelope ",
+                    "10.00",
+                  ),
+                )
+              ],
+            ),
+            sizedBoxhight(10),
+            Padding(
+              padding: const EdgeInsets.only(left: 350),
+              child: InkWell(
+                  onTap: () {},
+                  child: Text(
+                    "See more",
+                    style: TextStyle(
+                        color: GREY_3,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w500),
+                  )),
+            )
+          ],
+        ),
+      ),
+      sizedBoxhight(50),
+      BottomNavigationBar(
+        iconSize: 20,
+        currentIndex: selectindex,
+        onTap: (value) {
+          setState(() {
+            selectindex = value;
+          });
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              color: PRIMARAY_COLOR,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.favorite_border,
+              color: GREY_3,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.shopping_cart,
+              color: GREY_3,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person_outline,
+              color: GREY_3,
+            ),
+            label: '',
+          ),
+        ],
+      ),
     ]));
   }
 }

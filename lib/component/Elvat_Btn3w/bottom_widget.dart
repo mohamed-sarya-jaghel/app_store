@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:shopping_app/component/sizeedbox.dart';
 import 'package:shopping_app/res/colors.dart';
@@ -62,3 +64,23 @@ Widget elvatBtnSquar(
     ),
   );
 }
+
+Widget elvatBtnCircle(
+  Color color_background,
+) {
+  return SizedBox(
+    width: 32,
+    height: 32,
+    child: ElevatedButton(
+      style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(50),
+              side: const BorderSide(color: GREY_3)),
+          backgroundColor: color_background),
+      onPressed: () {},
+      child: null,
+    ),
+  );
+}
+
+// 

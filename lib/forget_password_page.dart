@@ -1,11 +1,11 @@
-// ignore_for_file: prefer_const_constructors
+// ignore: file_names
+// ignore_for_file: prefer_const_constructors, file_names, duplicate_ignore, avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:shopping_app/component/maintext_widget.dart';
 import 'package:shopping_app/res/colors.dart';
 
-import 'component/Number_Widget/number_widget2.dart';
-import 'component/Number_Widget/numbers_widget.dart';
 import 'component/sign_widget.dart';
 import 'component/sizeedbox.dart';
 
@@ -51,26 +51,22 @@ class _ForgetPasswrodState extends State<ForgetPasswrod> {
           ),
           sizedBoxhight(10),
           Padding(
-            padding: EdgeInsets.only(left: 40),
-            child: TextFormField(
-              controller: controller,
-              keyboardType: TextInputType.phone,
-              decoration: InputDecoration(
-                  suffixIcon: Icon(
-                    Icons.check_circle,
-                    color: GREEN,
-                    size: 20,
+              padding: EdgeInsets.only(left: 40),
+              child: Padding(
+                padding: const EdgeInsets.only(right: 40),
+                child: IntlPhoneField(
+                  decoration: InputDecoration(
+                    labelText: 'Phone Number',
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(),
+                    ),
                   ),
-                  prefix: Text("+963   "),
-                  prefixStyle: TextStyle(
-                      color: GREY_3, fontSize: 17, fontWeight: FontWeight.w400),
-                  labelStyle: TextStyle(color: GREY_3, fontSize: 11),
-                  hintStyle: TextStyle(
-                      color: GREY_3,
-                      fontSize: 22,
-                      fontWeight: FontWeight.w700)),
-            ),
-          )
+                  initialCountryCode: 'IN',
+                  onChanged: (phone) {
+                    print(phone.completeNumber);
+                  },
+                ),
+              ))
         ],
       ),
       sizedBoxhight(60),
@@ -91,7 +87,6 @@ class _ForgetPasswrodState extends State<ForgetPasswrod> {
         ),
       ),
       sizedBoxhight(90),
-      numberwidget2()
     ]));
   }
 }

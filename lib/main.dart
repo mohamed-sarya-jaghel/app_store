@@ -7,15 +7,19 @@ import 'package:shopping_app/Profile_Orderhistory.dart';
 import 'package:shopping_app/Profile_Home_page.dart';
 import 'package:shopping_app/SignUp_page.dart';
 import 'package:shopping_app/SingIn_page.dart';
+import 'About_Store.dart';
+import 'Chat_Store_page.dart';
 import 'Phone_Verified_page.dart';
+import 'Product_page.dart';
+import 'Profile_Setting.dart';
 import 'authentication_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const AppStore());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AppStore extends StatelessWidget {
+  const AppStore({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,6 +35,10 @@ class MyApp extends StatelessWidget {
         "homepage": (context) => const Homepage(),
         "profileinfo": (context) => const Profileinfo(),
         "orderhistory": (context) => const OrderHistory(),
+        "chatwithstore": (context) => const ChatWithStore(),
+        "aboutstore": (context) => const AboutStore(),
+        "proudctpage": (context) => const ProudctPage(),
+        "settingpage": (context) => const SettingPage(),
       },
     );
   }

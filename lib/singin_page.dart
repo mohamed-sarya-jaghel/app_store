@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:shopping_app/res/colors.dart';
 import 'component/Elvat_Btn3w/bottom_widget.dart';
@@ -94,7 +96,7 @@ class _SigninState extends State<Signin> {
                       borderRadius: BorderRadius.circular(5)),
                   backgroundColor: PRIMARAY_COLOR),
               onPressed: () {
-                Navigator.of(context).pushNamed("Signup");
+                    Navigator.of(context).pushNamed("homepage");
               },
               child: singinWidget("Sign in")),
         ),

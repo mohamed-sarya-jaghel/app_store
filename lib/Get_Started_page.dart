@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, file_names
 
 import 'package:flutter/material.dart';
 import 'package:shopping_app/res/colors.dart';
@@ -46,7 +46,7 @@ class GetStarted extends StatelessWidget {
                       topLeft: Radius.circular(100),
                       topRight: Radius.circular(100)),
                   child: Image.asset(
-                    "images/getstarted_2.jpg",
+                    "images/product_page.jpg",
                     width: 220,
                     height: 320,
                   ),
@@ -59,7 +59,7 @@ class GetStarted extends StatelessWidget {
                       bottomLeft: Radius.circular(193),
                       bottomRight: Radius.circular(193)),
                   child: Image.asset(
-                    "images/getstarted_1.jpg",
+                    "images/product_page.jpg",
                     width: 220,
                     height: 307,
                   ),

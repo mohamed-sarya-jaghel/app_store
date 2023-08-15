@@ -1,9 +1,10 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:shopping_app/component/Number_Widget/numbers_widget.dart';
 import 'package:shopping_app/res/colors.dart';
-
+  
 import 'component/maintext_widget.dart';
-import 'component/Number_Widget/number_widget2.dart';
 import 'component/sign_widget.dart';
 import 'component/sizeedbox.dart';
 
@@ -17,7 +18,7 @@ class Authentication extends StatefulWidget {
 class _AuthenticationState extends State<Authentication> {
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
+    return Scaffold(
         body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Padding(
         padding: const EdgeInsets.only(top: 25),
@@ -31,19 +32,19 @@ class _AuthenticationState extends State<Authentication> {
       sizedBoxhight(20),
       Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         mainText("OTP Authentication",
-            "An authentication code has been \n sent to (+963) 99555668"),
+            "An authentication code has been \n sent to your number"),
         sizedBoxhight(80),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 70),
           child: Row(
             children: [
-              numberWidget("6", "", 65, 65),
+              numberWidget(55, 65),
               sizedBoxwidth(10),
-              numberWidget("8", "", 65, 65),
+              numberWidget(55, 65),
               sizedBoxwidth(10),
-              numberWidget("4", "", 65, 65),
+              numberWidget(55, 65),
               sizedBoxwidth(10),
-              numberWidget(" ", " ", 65, 65)
+              numberWidget(55, 65)
             ],
           ),
         ),
@@ -86,7 +87,6 @@ class _AuthenticationState extends State<Authentication> {
               ),
             ),
             sizedBoxhight(80),
-            numberwidget2()
           ],
         )
       ])

@@ -17,6 +17,20 @@ const Color GREY_Textfiled = Color(0xff767680);
 const Color GREY_hintTextfiled = Color(0xff3C3C43);
 const Color WOMEN_BACKGROUND = Color(0xffE5989B);
 const Color PINK = Color(0xffF8B6C3);
+//chat page
+const Color WHITH1 = Color(0xffE9E9EB);
+const Color BLUE1 = Color(0xff007AFF);
+//photos on homepage
+const Color LIGHTGREY = Color(0xffA4A4A4);
+//
+const Color CIRCLE1 = Color(0xffF3BFAA);
+const Color CIRCLE2 = Color(0xff8E98F7);
+const Color CIRCLE3 = Color(0xff161616);
+const Color CIRCLE4 = Color(0xffDFDFDF);
+
+
+
+
 
 
 
