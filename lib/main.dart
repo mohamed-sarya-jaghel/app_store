@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shopping_app/Get_Started_page.dart';
 import 'package:shopping_app/dilevery_address.dart';
 import 'package:shopping_app/forget_password_page.dart';
@@ -24,7 +25,7 @@ class AppStore extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const GetStarted(),
+      home: GetStarted(),
       routes: {
         "Signup": (context) => const Signup(),
         "Signin": (context) => const Signin(),

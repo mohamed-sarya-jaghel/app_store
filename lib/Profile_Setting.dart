@@ -23,7 +23,8 @@ class SettingPage extends StatelessWidget {
         ),
       ),
       sizedBoxhight(40),
-      Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
+      Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           setting_botton(
               Icon(
@@ -31,27 +32,28 @@ class SettingPage extends StatelessWidget {
                 size: 40,
                 color: GREY,
               ),
-              "My profile"), setting_botton(
-                  Icon(
-                    Icons.settings,
-                    size: 40,
-                    color: GREY,
-                  ),
-                  "General Settings"),
-              setting_botton(
-                  Icon(
-                    Icons.language,
-                    size: 40,
-                    color: GREY,
-                  ),
-                  "Language Oprions"),
-              setting_botton(
-                  Icon(
-                    Icons.star,
-                    size: 40,
-                    color: GREY,
-                  ),
-                  "Rate Us"),
+              "My profile"),
+          setting_botton(
+              Icon(
+                Icons.settings,
+                size: 40,
+                color: GREY,
+              ),
+              "General Settings"),
+          setting_botton(
+              Icon(
+                Icons.language,
+                size: 40,
+                color: GREY,
+              ),
+              "Language Oprions"),
+          setting_botton(
+              Icon(
+                Icons.star,
+                size: 40,
+                color: GREY,
+              ),
+              "Rate Us"),
         ],
       ),
     ]));

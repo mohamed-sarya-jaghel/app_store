@@ -56,15 +56,16 @@ class _ForgetPasswrodState extends State<ForgetPasswrod> {
                 padding: const EdgeInsets.only(right: 40),
                 child: IntlPhoneField(
                   decoration: InputDecoration(
+                    focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: GREY_3)),
                     labelText: 'Phone Number',
+                    labelStyle: TextStyle(color: GREY_3),
                     border: OutlineInputBorder(
                       borderSide: BorderSide(),
                     ),
                   ),
                   initialCountryCode: 'IN',
-                  onChanged: (phone) {
-                    print(phone.completeNumber);
-                  },
+                  style: TextStyle(color: GREY_3),
                 ),
               ))
         ],

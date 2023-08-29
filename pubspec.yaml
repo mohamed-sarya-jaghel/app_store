@@ -34,6 +34,9 @@ dependencies:
   flutter:
     sdk: flutter
   intl_phone_field: ^3.2.0
+  bloc:
+  flutter_bloc:
+  email_validator:
   
   
   

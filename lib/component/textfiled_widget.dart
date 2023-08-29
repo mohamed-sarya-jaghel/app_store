@@ -24,6 +24,8 @@ Widget textFiled(
         padding: const EdgeInsets.only(left: 40, right: 60),
         child: TextFormField(
           decoration: InputDecoration(
+              focusedBorder:
+                  UnderlineInputBorder(borderSide: BorderSide(color: GREY_4)),
               prefixIcon: prefixIcon,
               labelStyle: TextStyle(color: GREY_3, fontSize: 11),
               hintText: hintText,
@@ -39,6 +41,8 @@ Widget textFileddelivry(String labeltxt) {
     padding: const EdgeInsets.only(right: 80, left: 20, bottom: 20),
     child: TextField(
       decoration: InputDecoration(
+        focusedBorder:
+            UnderlineInputBorder(borderSide: BorderSide(color: GREY_4)),
         labelText: labeltxt,
       ),
     ),

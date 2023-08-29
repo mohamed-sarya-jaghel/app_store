@@ -37,25 +37,29 @@ Widget Options_Botton(
     )
   ]);
 }
-Widget setting_botton(Icon icon,
+
+Widget setting_botton(
+  Icon icon,
   String text,
 ) {
   return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
     Padding(
-      padding: const EdgeInsets.only(left: 10,top: 25),
-      child: InkWell(onTap: (){},
+      padding: const EdgeInsets.only(left: 10, top: 25),
+      child: InkWell(
+        onTap: () {},
         child: SizedBox(
           width: 350,
           height: 44,
           child: Row(
-          
-            children: [icon,sizedBoxwidth(20),
+            children: [
+              icon,
+              sizedBoxwidth(20),
               Text(
                 text,
                 style: TextStyle(
                     fontSize: 17, fontWeight: FontWeight.w400, color: GREY_3),
-              ),sizedBoxwidth(150),
-             
+              ),
+              sizedBoxwidth(150),
             ],
           ),
         ),

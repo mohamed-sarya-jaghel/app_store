@@ -96,7 +96,7 @@ class _SigninState extends State<Signin> {
                       borderRadius: BorderRadius.circular(5)),
                   backgroundColor: PRIMARAY_COLOR),
               onPressed: () {
-                    Navigator.of(context).pushNamed("homepage");
+                Navigator.of(context).pushNamed("homepage");
               },
               child: singinWidget("Sign in")),
         ),
